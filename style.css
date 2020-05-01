@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Roboto", serif;
+  margin: 0;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#form,
+.tagline {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tagline {
+  text-align: center;
+  border-bottom: 10px double;
+  margin: 0 20px;
+  padding-bottom: 30px;
+}
+
+.contact {
+  border-bottom: 5px solid;
+}
+
+header {
+  background-color: darkslategrey;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  font: bold 50px;
+}
+
+.contact > .form-group > input,
+select {
+  content: "";
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  background-color: lightgray;
+  border-radius: 8px;
+  font-size: 20px;
+  border-style: none;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.form-group > select {
+  flex-direction: column;
+  color: gray;
+}
+
+.form-group > label,
+.newsletter_group > label {
+  color: cadetblue;
+}
+
+input[name="zip_code"] {
+  max-width: 30%;
+}
+
+fieldset,
+textarea {
+  border-style: none;
+}
+
+::placeholder {
+  font-style: italic;
+  text-align: right;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline-color: dodgerblue;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  border-radius: 8px;
+  resize: none;
+  background-color: lightgray;
+  margin-top: 20px;
+}
+
+.newsletter_group {
+  padding: 8px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  background-color: teal;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+footer {
+  text-align: center;
+  background-color: darkslategrey;
+  padding: 20px;
+  color: white;
+}
+/* Media Queries----------------------------- */
+
+@media (min-width: 768px) {
+  #form,
+  .tagline {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+  header,
+  footer {
+    background-color: black;
+  }
+
+  .form-group {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .form-group > label {
+    min-width: 25%;
+  }
+}
